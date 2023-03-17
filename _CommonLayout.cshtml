@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/adminFirst.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="maindiv">
+        <div class="Helpdesk">
+            <img src="~/Image/AdminFirstpage/Helpdesk.jpg" alt="image" />
+            <button class="loginbtn">Logout</button>
+        </div>
+        <div class="contentall">
+            <div class="sideoption">
+                <span><h3>@Html.ActionLink("Dashboard", "AdminFirstpage", "Adminuser", new { @class = "my-link" })</h3></span>
+                <hr />
+
+                <div class="dropdownfile">
+                    <div class="dropbtn">
+                        <span><h3 style="margin-left:26%">@Html.ActionLink("Ticket", "Ticketdetails", "Adminuser", new { @class = "my-link" })</h3></span>
+                        @*<a href="">Tickets</a>*@
+                        @*<i class="fa fa-caret-down"></i>*@
+                    </div>
+                    @*<div class="trianle"></div>*@
+                  
+                </div>
+                <hr />
+
+            </div>
+
+            <div class="m" style="width:80%; margin-left:2%; margin-top:3%">
+                @RenderBody()
+            </div>
+
+        </div>
+
+
+
+
+
+
+    
+        <footer>
+            <h5>HelpDesk</h5>
+
+            <div class="credex">
+                <p> 2023 Credex Technology. All Rights Reserved</p>
+                <div class="phon">
+                    <img src="~/Image/AdminFirstpage/phone.jpg" />
+                    <p>+1-408-703-6930</p>
+                </div>
+                <div class="ema">
+                    <img src="~/Image/AdminFirstpage/email.png" />
+                    <p>info@credextechnology.com</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+</body>
+</html>
